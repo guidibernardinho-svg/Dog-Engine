@@ -3,13 +3,28 @@ import SwiftUI
 struct ContentView: View {
 
     var body: some View {
-        VStack {
-            Text("🐶 Dog Engine")
-                .font(.largeTitle)
 
-            Text("2D & 3D Game Engine")
-                .foregroundColor(.gray)
+        VStack(spacing: 0) {
+
+            ToolbarView()
+
+            HStack(spacing: 0) {
+
+                HierarchyView()
+
+                Divider()
+
+                SceneView()
+
+                Divider()
+
+                InspectorView()
+            }
+
+            Divider()
+
+            AssetBrowserView()
         }
-        .frame(minWidth: 900, minHeight: 600)
+        .frame(minWidth: 1400, minHeight: 800)
     }
 }
